@@ -1,0 +1,121 @@
+.banner{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
+    padding-top: 226px;
+    padding-bottom: 36px;
+}
+.frame{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 101%;
+    background-repeat: no-repeat;
+    background-size: 100% 101%; 
+    background-position:top center;
+}
+.banner .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.banner p{
+    max-width: 705px;
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 32.78px;
+    text-align: center;
+}
+.banner-img{
+    position: relative;
+}
+.banner-img img{
+    width: 100%;
+}
+.banner-img::before{
+    content: '';
+    display: block;
+    width: 276px;
+    height: 183px;
+    background-image: url('../assets/imgs/left-side.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 15%;
+    left: -209px;
+}
+.banner-img::after{
+    content: '';
+    display: block;
+    width: 627px;
+    height: 417px;
+    background-image: url('../assets/imgs/right-side.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top:68%;
+    transform: translateY(-50%);
+    right: -332px;
+}
+
+.banner-swiper .swiper-pagination{
+    width: 48px;
+    top: 50%;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.banner-swiper .swiper-pagination .swiper-pagination-bullet{
+    width: 18px;
+    height: 1.3px;
+    background-color: rgba(126, 151, 167, 1);
+    border-radius: 0;
+    opacity: 1;
+    flex-shrink: 0;
+}
+.banner-swiper .swiper-pagination .swiper-pagination-bullet-active{
+    width: 46px;
+    height: 3px;
+    background-color: rgba(17, 85, 157, 1);
+}
+
+@media (max-width: 1700px){
+    .frame{
+        background-size: cover;
+    }
+}
+
+@media (max-width: 1225px){
+    .frame{
+        display: none;
+    }
+    .banner-swiper .swiper-pagination{
+        left: 15px;
+    }
+}
+
+@media (max-width: 500px){
+    .banner{
+        padding-top: 165px;
+    }
+    .banner p{
+        font-size: 20px;
+        line-height: 27px;
+        text-align: left;
+    }
+    .banner-img::after{
+        width: 183px;
+        height: 121px;
+    }
+    .banner-swiper .swiper-pagination{
+        display: none;
+    }
+}

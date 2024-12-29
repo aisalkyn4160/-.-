@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&display=swap');
+
+@import url('header-style.css');
+@import url('banner-style.css');
+@import url('products-style.css');
+@import url('about-style.css');
+@import url('projects-style.css');
+@import url('popup-style.css');
+@import url('card-style.css');
+@import url('footer-style.css');
+
+
+
+
+/* ------------------------------------------ fonst-styles------------------------------------------- */
+@font-face {
+	font-family: 'BebasNeue';
+	src: url('../fonts/BebasNeueCyrillic/bebasneuecyrillic.ttf') format('truetype'); ;
+}
+
+/* -------------------------------------------reset-styles------------------------------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+*, *:before, *:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+:focus, :active{outline: none;}
+a:focus, a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html, body{
+	height: 100%;
+	width: 100%;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea{font-family: inherit;}
+
+input::-ms-clear{display:none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding: 0;border: 0;}
+a, a:visited{text-decoration: none; color: inherit;}
+a:hover{text-decoration: none;}
+ul li{list-style-type: none;}
+
+h1,h2, h3, h4, h5, h6{font-style: inherit;}
+
+/* -------------------------------------------main-styles------------------------------------------- */
+html{
+	scroll-behavior: smooth;
+}
+
+body{
+	font-family: "Manrope", sans-serif;
+	background-color:rgba(244, 244, 244, 1);
+	color: rgba(75, 75, 75, 1);
+}
+.no-scroll{
+	overflow: hidden;
+}
+.layout{
+	/* display: flex; */
+	flex-direction: column;
+	height: 100vh;
+}
+
+header{
+	flex-shrink: 0;
+}
+
+main{
+	flex-grow: 1;
+}
+
+footer{
+	flex-shrink: 0;
+}
+
+.container{
+	max-width: 1230px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+button{
+	padding: 16px 28px;
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 17.6px;
+	text-align: center;
+	white-space: nowrap;
+	border-radius: 6px	
+}
+
+h1{
+	font-family: 'BebasNeue', sans-serif;
+	font-size: 73px;
+	font-weight: 500;
+	line-height: 1;
+	letter-spacing: 0.01em;
+	text-align: center;	
+	color: rgba(17, 85, 157, 1);
+	text-transform: uppercase;
+	margin-bottom: 14px;
+}
+h2{
+	font-family: 'BebasNeue', sans-serif;
+	font-size: 60px;
+	font-weight: 500;
+	line-height: 1;
+	color: rgba(17, 85, 157, 1);
+}
+
+h3{
+	font-size: 24px;
+	font-weight: 600;
+	line-height: 32.78px;
+	margin-bottom: 8px;
+}
+
+@media (max-width: 500px){
+	h1{
+		font-size: 45px;
+		text-align: left;
+	}
+	h2{
+		font-size: 40px;
+	}
+}
